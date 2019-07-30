@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-role-jumphost
+
+ssh_config_path: /tmp/ssh_config
+jumphost_user: "{{ ansible_user }}"

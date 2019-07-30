@@ -1,0 +1,27 @@
+---
+
+dependency:
+  name: galaxy
+lint:
+  name: yamllint
+driver:
+  name: docker
+platforms:
+  - name: instance
+    image: centos:7
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+  playbooks:
+    converge: playbook.yml
+scenario:
+  test_sequence:
+    - lint
+    - dependency
+    - syntax
+    - verify
+verifier:
+  name: testinfra
+  lint:
+    name: flake8

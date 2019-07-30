@@ -1,0 +1,10 @@
+Host {{ jumphost }}
+  StrictHostKeyChecking=no
+  UserKnownHostsFile=/dev/null
+
+{% for host in (groups['all'] | difference(jumphost)) %}
+Host {{ hostvars[host].ansible_ssh_host}}
+  StrictHostKeyChecking=no
+  UserKnownHostsFile=/dev/null
+  ProxyCommand ssh -o StrictHostKeyChecking=no -W %h:%p -q {{ jumphost_user }}@{{ jumphost }} -p 9229
+{% endfor %}

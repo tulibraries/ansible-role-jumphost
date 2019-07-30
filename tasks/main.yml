@@ -1,0 +1,8 @@
+---
+# tasks file for ansible-role-jumphost
+
+
+- name: Create the jumphost ssh config
+  template:
+    src: ssh.config.j2
+    dest: "{{ ssh_config_path }}"
