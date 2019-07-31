@@ -15,7 +15,7 @@ Add a play to the beginning of your playbook with this role and uses 'localhost'
   hosts: localhost
   role:
     - role: tulibraries.ansible_role_jumphost
-      jumphost: "{{ hostvars[groups['lb'][0]].ansible_ssh_host }}"
+      jumphost: "{{ groups['lb'][0] }}"
 ```
 
 Then, configure each inventory hosts file to use that config
@@ -57,7 +57,7 @@ passed in as parameters) is always nice for users too:
   hosts: localhost
   role:
     - role: tulibraries.ansible_role_jumphost
-      jumphost: "{{ hostvars[groups['lb'][0]].ansible_ssh_host }}"
+      jumphost: "{{ groups['lb'][0] }}"
 ```
 
 License

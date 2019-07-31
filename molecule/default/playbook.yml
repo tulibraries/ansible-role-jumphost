@@ -1,7 +1,8 @@
 ---
 - name: Converge
-  hosts: all
+  hosts: main
   roles:
     - role: ansible-role-jumphost
   vars:
-    - jumphost: localhost
+    - jumphost: otherhost
+    - ansible_user: root
