@@ -9,18 +9,18 @@ driver:
 platforms:
   - name: instance
     image: centos:7
+  - name: otherhost
+    image: centos:7
 provisioner:
   name: ansible
+  inventory:
+    links:
+      hosts: inventory
+
   lint:
     name: ansible-lint
   playbooks:
     converge: playbook.yml
-scenario:
-  test_sequence:
-    - lint
-    - dependency
-    - syntax
-    - verify
 verifier:
   name: testinfra
   lint:
