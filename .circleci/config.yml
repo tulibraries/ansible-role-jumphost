@@ -12,15 +12,13 @@ jobs:
   ansible_review:
     working_directory: ~/ansible-role-jumphost
     docker:
-      - image: circleci/python:3.6.8
+      - image: cimg/python:3.7.11
         environment:
           PIPENV_VENV_IN_PROJECT: true
     steps:
       - checkout
       - run:
-          command: |
-            sudo pip install pipenv
-            pipenv install --dev
+          command: pipenv install --dev
       - setup_remote_docker
       - run:
           command: |

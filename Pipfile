@@ -12,4 +12,4 @@ cryptography = "==3.3.2"
 molecule = "==2.22"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
