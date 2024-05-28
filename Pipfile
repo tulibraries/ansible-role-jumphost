@@ -5,12 +5,16 @@ verify_ssl = true
 
 [dev-packages]
 docker="*"
+molecule = "*"
+molecule-docker = "*"
 
 [packages]
-ansible = "==2.9.20"
-cryptography = "==3.3.2"
-jinja2 = "==2.11.3"
-molecule = "==2.22"
+ansible = "==9.6.0"
+cryptography = "==42.0.7"
+jinja2 = "*"
+
+# Remove once this is fixed: https://github.com/ansible-collections/community.docker/issues/868#issuecomment-2124979976
+requests = "==2.31.0"
 
 [requires]
-python_version = "3.7"
+python_version = "3.12"
