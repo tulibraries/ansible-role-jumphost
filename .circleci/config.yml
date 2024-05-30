@@ -20,4 +20,5 @@ jobs:
       - run: pipenv install --dev
       - setup_remote_docker
       - run: sudo apt update; sudo apt install rsync
+      - run: pipenv run molecule destroy
       - run: pipenv run molecule test
