@@ -1,27 +1,22 @@
 ---
-
 dependency:
   name: galaxy
-lint:
-  name: yamllint
 driver:
   name: docker
 platforms:
   - name: instance
-    image: centos:7
+    image: rockylinux:8
+    cgroupns: host
   - name: otherhost
-    image: centos:7
+    image: rockylinux:8
+    cgroupns: host
 provisioner:
   name: ansible
+  log: true
   inventory:
     links:
       hosts: inventory
-
-  lint:
-    name: ansible-lint
   playbooks:
     converge: playbook.yml
 verifier:
   name: testinfra
-  lint:
-    name: flake8

@@ -2,7 +2,7 @@
 - name: Converge
   hosts: main
   roles:
-    - role: ansible-role-jumphost
+    - role: tulibraries.ansible_role_jumphost
   vars:
     - jumphost: otherhost
     - ansible_user: root
