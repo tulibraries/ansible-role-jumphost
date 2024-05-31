@@ -12,7 +12,3 @@ galaxy_info:
     - name: rockylinux
       versions:
         - 8
-
-  galaxy_tags: []
-
-  dependencies: []
