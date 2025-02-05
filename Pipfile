@@ -11,7 +11,7 @@ pytest = "*"
 pytest-testinfra = "*"
 
 [packages]
-ansible = "==9.6.1"
+ansible = "==9.7.0"
 cryptography = "==42.0.7"
 jinja2 = "*"
 
