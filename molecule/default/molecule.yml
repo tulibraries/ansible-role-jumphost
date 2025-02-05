@@ -5,10 +5,10 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: rockylinux:8
+    image: geerlingguy/docker-rockylinux9-ansible:latest
     cgroupns: host
   - name: otherhost
-    image: rockylinux:8
+    image: geerlingguy/docker-rockylinux9-ansible:latest
     cgroupns: host
 provisioner:
   name: ansible
