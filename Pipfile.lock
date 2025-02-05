@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f20170aaa1b5e8c8d5df132938d7043d388655eb9656267c6ab0a3e7af889ef3"
+            "sha256": "f65fb1c8ba56104147e7b6ca7974a8c565f458c15a24721c2dbfd7089500b455"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,20 +18,20 @@
     "default": {
         "ansible": {
             "hashes": [
-                "sha256:5fbc92271637f0bb22836095cf601ee03d02f6b26180205836bd1b6e4b2f2605",
-                "sha256:7d86db34cb25acb354fed1cc2b19ebbe1f42fe2bf4860b9ba7823d81880a30a8"
+                "sha256:0089f08e047ceb70edd011be009f5c6273add613fbe491e9697c0556c989d8ea",
+                "sha256:59d29e3de1080e740dfa974517d455217601b16d16880314d9be26145c68dc22"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.10'",
-            "version": "==9.7.0"
+            "version": "==10.7.0"
         },
         "ansible-core": {
             "hashes": [
-                "sha256:80279fffd98686badfaa32e1ec785d98a6df1b2fc1e4097dec0597640d746415",
-                "sha256:b7b6df2fb0cf065b091d0332e98afbe4b028f2ffe58078e7dcf83f09e35cc8ad"
+                "sha256:1c7883566acea9e70fd07af76f1fcc6e3eb674a7b77064a18466fdab7c9ae553",
+                "sha256:39be8a7986a2c7d36069b0d97220bc2f6783c65fea7c6d7e0e2d00d1ac8af877"
             ],
             "markers": "python_version >= '3.10'",
-            "version": "==2.16.14"
+            "version": "==2.17.8"
         },
         "certifi": {
             "hashes": [
@@ -446,11 +446,11 @@
         },
         "ansible-core": {
             "hashes": [
-                "sha256:80279fffd98686badfaa32e1ec785d98a6df1b2fc1e4097dec0597640d746415",
-                "sha256:b7b6df2fb0cf065b091d0332e98afbe4b028f2ffe58078e7dcf83f09e35cc8ad"
+                "sha256:1c7883566acea9e70fd07af76f1fcc6e3eb674a7b77064a18466fdab7c9ae553",
+                "sha256:39be8a7986a2c7d36069b0d97220bc2f6783c65fea7c6d7e0e2d00d1ac8af877"
             ],
             "markers": "python_version >= '3.10'",
-            "version": "==2.16.14"
+            "version": "==2.17.8"
         },
         "attrs": {
             "hashes": [
