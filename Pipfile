@@ -12,7 +12,7 @@ pytest-testinfra = "*"
 
 [packages]
 ansible = "==10.7.0"
-cryptography = "==42.0.7"
+cryptography = "==44.0.1"
 jinja2 = "*"
 
 # Remove once this is fixed: https://github.com/ansible-collections/community.docker/issues/868#issuecomment-2124979976
