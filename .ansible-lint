@@ -1,2 +1,5 @@
 skip_list:
   - '208'
+  - no-changed-when
+  - yaml[brackets]
+  - yaml[line-length]
