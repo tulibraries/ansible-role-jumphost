@@ -4,9 +4,8 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+ansible-lint = "*"
 docker="*"
-molecule = "*"
-molecule-docker = "*"
 pytest = "*"
 pytest-testinfra = "*"
 
@@ -14,9 +13,9 @@ pytest-testinfra = "*"
 ansible = "==10.7.0"
 cryptography = "==42.0.7"
 jinja2 = "*"
-
-# Remove once this is fixed: https://github.com/ansible-collections/community.docker/issues/868#issuecomment-2124979976
-requests = "==2.31.0"
+molecule = "*"
+molecule-docker = "*"
+requests = "*"
 
 [requires]
 python_version = "3.12"
