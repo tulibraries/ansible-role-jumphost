@@ -10,8 +10,8 @@ pytest = "*"
 pytest-testinfra = "*"
 
 [packages]
-ansible = "==10.7.0"
-cryptography = "==42.0.7"
+ansible = "==12.1.0"
+cryptography = "*"
 jinja2 = "*"
 molecule = "*"
 molecule-docker = "*"
