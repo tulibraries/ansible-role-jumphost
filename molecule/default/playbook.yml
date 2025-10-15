@@ -4,5 +4,5 @@
   roles:
     - role: tulibraries.ansible_role_jumphost
   vars:
-    - jumphost: otherhost
-    - ansible_user: root
+    jumphost: otherhost
+    ansible_user: root
