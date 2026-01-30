@@ -7,12 +7,16 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_hosts_file(host):
-    f = host.file('/tmp/ssh_config')
+    ssh_config_path = host.user().home + "/.ssh/config"
+    f = host.file(ssh_config_path)
+
     assert f.exists
-    proxyline = """
-    ProxyCommand ssh -o StrictHostKeyChecking=no \
-    -W %h:%p -q root@otherhost -p 9229
-    """
+
+    proxyline = (
+        "ProxyCommand ssh -o StrictHostKeyChecking=no "
+        "-W %h:%p -q root@otherhost -p 9229"
+    )
+
     assert f.contains(proxyline)
     assert f.contains("Host instance")
     assert f.contains("Host otherhost")
