@@ -10,7 +10,7 @@
 
 - name: Create the jumphost ssh config
   ansible.builtin.template:
-    src: ssh_config.j2
+    src: ssh.config.j2
     dest: "{{ jumphost_ssh_config_path }}"
     owner: "{{ jumphost_user }}"
     group: "{{ jumphost_user }}"

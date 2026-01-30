@@ -6,4 +6,5 @@ Host {{ hostvars[jumphost].ansible_ssh_host | default(hostvars[jumphost].invento
 Host {{ hostvars[host].ansible_ssh_host | default(hostvars[host].inventory_hostname) }}
   StrictHostKeyChecking=no
   UserKnownHostsFile=/dev/null
-  ProxyCommand ssh -o StrictHostKeyChecking=no -W %h:%p -q {{ jumphost_user }}@{{ hostvars[jumphost].ansible_ssh_host | default(hostvars[jumphost].inventory_hostname) }}
+  ProxyCommand ssh -o StrictHostKeyChecking=no -W %h:%p -q {{ jumphost_user }}@{{ hostvars[jumphost].ansible_ssh_host | default(hostvars[jumphost].inventory_hostname) }} -p 9229
+{% endfor %}

@@ -3,3 +3,7 @@
 
 ssh_config_path: /tmp/ssh_config
 jumphost_user: "{{ ansible_user }}"
+
+# SSH config location for jumphost
+jumphost_ssh_dir: "/home/{{ jumphost_user }}/.ssh"
+jumphost_ssh_config_path: "{{ jumphost_ssh_dir }}/config"
