@@ -2,10 +2,9 @@ Host {{ hostvars[jumphost].ansible_ssh_host | default(hostvars[jumphost].invento
   StrictHostKeyChecking=no
   UserKnownHostsFile=/dev/null
 
-{% for host in (groups['all'] | difference(jumphost)) %}
+{% for host in (groups['all'] | difference([jumphost]) | sort) -%}
 Host {{ hostvars[host].ansible_ssh_host | default(hostvars[host].inventory_hostname) }}
   StrictHostKeyChecking=no
   UserKnownHostsFile=/dev/null
   ProxyCommand ssh -o StrictHostKeyChecking=no -W %h:%p -q {{ jumphost_user }}@{{ hostvars[jumphost].ansible_ssh_host | default(hostvars[jumphost].inventory_hostname) }} -p 9229
-
 {% endfor %}

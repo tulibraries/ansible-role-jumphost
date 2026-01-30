@@ -1,8 +1,15 @@
 ---
 # tasks file for ansible-role-jumphost
-
+- name: Ensure jumphost ssh directory exists
+  ansible.builtin.file:
+    path: "{{ jumphost_ssh_dir }}"
+    state: directory
+    mode: "0755"
 
 - name: Create the jumphost ssh config
   ansible.builtin.template:
     src: ssh.config.j2
-    dest: "{{ ssh_config_path }}"
+    dest: "{{ jumphost_ssh_config_path }}"
+    owner: "{{ jumphost_user }}"
+    group: "{{ jumphost_user }}"
+    mode: "0600"
