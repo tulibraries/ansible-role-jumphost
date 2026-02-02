@@ -5,12 +5,9 @@
     path: "{{ jumphost_ssh_dir }}"
     state: directory
     mode: "0700"
-    owner: "{{ jumphost_user }}"
-    group: "{{ jumphost_user }}"
+
 - name: Create the jumphost ssh config
   ansible.builtin.template:
     src: ssh.config.j2
     dest: "{{ jumphost_ssh_config_path }}"
     mode: "0600"
-    owner: "{{ jumphost_user }}"
-    group: "{{ jumphost_user }}"
